@@ -5,12 +5,14 @@ var dicount = document.getElementById("toggle-discount");
 var check = document.getElementById("check-toggle")
 
 view.innerHTML = "100K PAGEVIEWS";
-value.innerHTML = "$16.00";
-
+value.innerHTML = (16).toFixed(2);
 
 check.onclick = () => {
-    if(dicount.value == 'on') {
-        alert(dicount.value)
+    if(dicount.checked == true) {
+        var number = parseInt(value.innerHTML, 10)
+        value.innerHTML = (number-(number*0.25)).toFixed(2);
+    } else if(dicount.checked == true) {
+        value.innerHTML = "VVV PAGEVIEWS";
     }
 }
 
@@ -18,19 +20,19 @@ check.onclick = () => {
 slider.onclick = function() {
     if(this.value == 1) {
         view.innerHTML = "10K PAGEVIEWS";
-        value.innerHTML = "$8.00";
+        value.innerHTML = "8.00";
     } else if(this.value == 2) {
         view.innerHTML = "50K PAGEVIEWS";
-        value.innerHTML = "$12.00";
+        value.innerHTML = "12.00";
     } else if(this.value == 3) {
         view.innerHTML = "100K PAGEVIEWS";
-        value.innerHTML = "$16.00";
+        value.innerHTML = "16.00";
     } else if(this.value == 4) {
         view.innerHTML = "500K PAGEVIEWS";
-        value.innerHTML = "$24.00";
+        value.innerHTML = "24.00";
     } else {
         view.innerHTML = "1M PAGEVIEWS";
-        value.innerHTML = "$36.00";
+        value.innerHTML = "36.00";
     }
 }
 

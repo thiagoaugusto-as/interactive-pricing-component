@@ -30,11 +30,16 @@ body {
 }
 .header-title {
     width: 100%;
-
+    background-image: url("./images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    padding: 36px;
 
 }
 .header-title h1 {
@@ -43,9 +48,8 @@ body {
     font-weight: 600;
 }
 .main-card {
-    width: 600px;
-    height: 400px;
-    padding: 20px 50px 20px 50px;
+    width: 500px;
+    padding: 40px 50px 40px 50px;
 
     border-radius: 10px;
     box-shadow: 0px 0px 20px 4px rgba(157, 199, 195, 0.2);
@@ -107,6 +111,10 @@ body {
     background-color: #14d4c3;
     border-radius: 50%;
     box-shadow: 0px 0px 20px 4px rgba(20, 212, 195, 0.5);
+    transition: 0.5s;
+}
+.slider::-webkit-slider-thumb:hover {
+    background-color: #22aea2
 }
 .main-card--toggle {
     width: 100%;
@@ -155,7 +163,7 @@ body {
     transition: .4s;
 }
 .main-card--toggle input:checked + .switch--slider {
-    background-color: #0fd9c4;
+    background-color: #77ebdc;
 }
 .main-card--toggle input:checked + .switch--slider:before {
     -webkit-transform: translateX(19px);
@@ -179,13 +187,39 @@ body {
     background-color: #fdedec;
     color: #e6a191;
 
+    opacity: 0.3;
+    transition: 0.5s;
 }
-/* .test {
-    width: 600px;
-    margin-top: 9px;
-    height: 9px;
-    border-radius: ;
-    background-color: black;
-    position: absolute;
-    border-radius: 15px;
-} */
+.main-card--submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 75px;
+}
+.main-card--submit a {
+    padding: 12px 45px 12px 45px;
+
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: 0.5s;
+
+    color: #e8effb;
+    background-color: #293356;
+}
+.main-card--submit a:hover {
+    background-color: #212944;
+}
+.main-card--submit--list img {
+    height: 8px;
+    width: 8px;
+    margin-right: 15px;
+}
+.main-card--submit--list span {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #a2a4b8;
+}
