@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -16,10 +16,33 @@
     <p>Sign-up 30-day trial. No credit card required</p>
   </div>
   <div class="main-card">
+    <div class="main-card--header">
+      <span id="view"></span>
+      <div class="main-card--header--number">
+        <h1 id="value_month">$16.00</h1>
+        <span>/ month</span>
+      </div>
+    </div>
+    <div class="main-card--slidecontainer">
+      <div class="test"></div>
+      <input type="range" min="1" max="5" value="3" class="slider" id="myRange" steps="1" value="1">
+    </div>
+    <div class="main-card--toggle">
+      <span>Monthly Billing</span>
 
+      <label class="switch" id="check-toggle">
+        <input type="checkbox" id="toggle-discount">
+        <span class="switch--slider switch--round"></span>
+      </label>
+
+      <span>Yearly Billing</span>
+      <div class="main-card--toggle--discount">25% discount</div>
+    </div>
   </div>
   
 </body>
+
+<script type="text/javascript" src="./script.js"></script>
 <!-- <footer class="attribution">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   Coded by <a href="#">Thiago Augsto</a>.
