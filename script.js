@@ -1,21 +1,26 @@
 var slider = document.getElementById("myRange");
 var view = document.getElementById("view");
 var value = document.getElementById("value_month");
-var dicount = document.getElementById("toggle-discount");
-var check = document.getElementById("check-toggle")
+var checkbox = document.querySelector('input[type="checkbox"]');
 
 view.innerHTML = "100K PAGEVIEWS";
 value.innerHTML = (16).toFixed(2);
 
-check.onclick = () => {
-    if(dicount.checked == true) {
-        var number = parseInt(value.innerHTML, 10)
-        value.innerHTML = (number-(number*0.25)).toFixed(2);
-    } else if(dicount.checked == true) {
-        value.innerHTML = "VVV PAGEVIEWS";
-    }
-}
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("entrei")
 
+    checkbox.addEventListener('change', function() {
+        if(checkbox.checked) {
+            var number = parseInt(value.innerHTML, 10)
+            value.innerHTML = (number-(number*0.25)).toFixed(2);
+        } else if(!checkbox.checked) {
+            var number = parseInt(value.innerHTML, 10)
+            value.innerHTML = (number*(100/75)).toFixed(2);
+        } else {
+            console.log("nada")
+        }
+    })
+})
 
 slider.onclick = function() {
     if(this.value == 1) {
