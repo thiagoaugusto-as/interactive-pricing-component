@@ -2,24 +2,21 @@ var slider = document.getElementById("myRange");
 var view = document.getElementById("view");
 var value = document.getElementById("value_month");
 var checkbox = document.querySelector('input[type="checkbox"]');
+var dicount = document.getElementById("content-discont");
 
 view.innerHTML = "100K PAGEVIEWS";
 value.innerHTML = (16).toFixed(2);
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("entrei")
-
-    checkbox.addEventListener('change', function() {
-        if(checkbox.checked) {
-            var number = parseInt(value.innerHTML, 10)
-            value.innerHTML = (number-(number*0.25)).toFixed(2);
-        } else if(!checkbox.checked) {
-            var number = parseInt(value.innerHTML, 10)
-            value.innerHTML = (number*(100/75)).toFixed(2);
-        } else {
-            console.log("nada")
-        }
-    })
+checkbox.addEventListener('change', function() {
+    if(checkbox.checked) {
+        var number = parseInt(value.innerHTML, 10)
+        value.innerHTML = (number-(number*0.25)).toFixed(2);
+        dicount.style.opacity = "1";
+    } else if(!checkbox.checked) {
+        var number = parseInt(value.innerHTML, 10)
+        value.innerHTML = (number*(100/75)).toFixed(2);
+        dicount.style.opacity = "0.3";
+    }
 })
 
 slider.onclick = function() {
