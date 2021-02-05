@@ -27,13 +27,16 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
 }
 .header-title {
-    width: 100%;
+    width: 100% !important;
     background-image: url("./images/pattern-circles.svg");
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
+
+    text-align: center;
     
     display: flex;
     justify-content: center;
@@ -51,6 +54,8 @@ body {
     width: 500px;
     padding: 40px 50px 40px 50px;
 
+    margin: 0px 25px;
+
     border-radius: 10px;
     box-shadow: 0px 0px 20px 4px rgba(157, 199, 195, 0.2);
 
@@ -62,6 +67,9 @@ body {
     align-items: center;
     width: 100%;
     color: #b4b6c4;
+}
+.main-card--toggle--discount--min {
+    display: none;
 }
 .main-card--header span:first-child {
     letter-spacing: 2px;
@@ -222,4 +230,49 @@ body {
     align-items: center;
     font-size: 13px;
     color: #a2a4b8;
+}
+@media (max-width: 530px) { 
+    .header-title h1 {
+        font-size: 18px;
+        width: 100%;
+    }
+    .header-title p {
+        font-size: 12px;
+        width: 140px;
+    }
+    .header-title {
+        padding: 70px 0px;
+    }
+    .main-card--header--views {
+        text-align: center;
+        width: 100%;
+    }
+    .main-card--header {
+        flex-wrap: wrap;
+    }
+    .main-card--header--number {
+        width: 100% !important;
+        justify-content: center;
+    }
+    .main-card--toggle--discount--max {
+        display: none;
+    }
+    .main-card--toggle--discount--min {
+        display: block;
+    }
+    .main-card--toggle {
+        font-size: 10px
+    }
+    .main-card--submit {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 70px;
+    }
+    .main-card--submit--list {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
 }
