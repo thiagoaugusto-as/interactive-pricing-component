@@ -19,5 +19,5 @@ The challenge is to build out this interactive pricing component and get it look
 
 ## Giving feedback
 
-Feedback is always welcome, so if you have any to give on this challenge please told..
+Feedback is always welcome, so if you have any to give on this challenge please told.
 
