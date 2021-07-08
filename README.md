@@ -16,8 +16,7 @@ The challenge is to build out this interactive pricing component and get it look
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Use the slider and toggle to see prices for different page view numbersdd
-
-## Giving feedback
+cxvxcv## Giving feedback
 
 Feedback is always welcome, so if you have any to give on this challenge please told.
 
